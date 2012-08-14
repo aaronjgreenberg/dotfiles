@@ -4,9 +4,9 @@
 My dotfiles.
 
 These are cobbled together from lots of articles and GitHub repos.
-[Zach Holman's](https://github.com/holman/dotfiles) were especially,
-and mine borrow heavily from. As it goes with dotfiles. I also borrow quite
-a bit from Robby Russell's 
+[Zach Holman's dofiles](https://github.com/holman/dotfiles) were an 
+inspiration, and mine borrow heavily from them. So it goes with dotfiles. 
+I also borrow quite a bit from Robby Russell's 
 [Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh/). I used to use it, but
 decided I didn't need many of the extra files, so I consolidated. I've done my
 best to cite and reference all my sources, but if you see something that isn't
