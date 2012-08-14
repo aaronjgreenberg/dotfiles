@@ -1,0 +1,10 @@
+#!/bin/bash
+# GPO
+# ===
+# Pushes up the current branch you're working on to a remote called origin
+#
+# Aaron Greenberg
+# August 2012
+
+br=`git branch | grep "*"`
+git push origin ${br/* /}

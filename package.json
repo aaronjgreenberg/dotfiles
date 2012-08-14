@@ -1,0 +1,25 @@
+// Sample package.json file
+// ========================
+// Includes some useful node.js packages for use in a Javascript project.
+// Aaron Greenberg
+// August 2012
+
+{
+	"name": "Aaron Greenberg",
+	"version": "6.30.91",
+	"engines": {
+		"node": ">=x.x.x"
+	},
+	"dependencies": {
+		"prompt": 	"x.x.x", // A beautiful command-line prompt for node.js
+												 // https://github.com/flatiron/prompt
+		"nopt":			"x.x.x", // Node/npm Option Parsing
+											 	 // https://github.com/isaacs/nopt
+		"request":	"x.x.x"	 // Simplified HTTP request client.
+												 // https://github.com/mikeal/request
+		"winston":	"x.x.x"	 // A multi-transport async logging library for node.js
+												 // https://github.com/flatiron/winston
+		"async":		"x.x.x"	 //
+												 //
+	}
+}

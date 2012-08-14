@@ -1,0 +1,13 @@
+# GITIGNORE FILE
+# ==============
+#
+# Aaron Greenberg
+# August 2012
+
+# OS X - Specific
+# ---------------
+.DS_Store
+
+# Emacs Auto-Save Files
+# ---------------------
+*~

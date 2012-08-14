@@ -1,0 +1,54 @@
+# TMUX CONFIGURATION FILE
+# =======================
+# Manual Page -> http://www.openbsd.org/cgi-bin/man.cgi?query=tmux&sektion=1
+#
+# Aaron Greenberg
+# August 2012
+
+# First of all, we're using ZSH
+set-option -g default-shell /bin/zsh
+
+# Make the default command CTRL + <s>
+set-option -g prefix C-s
+unbind-key C-b
+bind-key s send-prefix
+
+# Allow switching currently focused pane by mouse click
+setw -g mode-mouse on
+set-option -g mouse-select-pane on
+
+# Current window titling
+set-option -g set-titles on
+set-option -g set-titles-string 'U R IN WINDOW #I, PANE #P'
+
+# Kill panes with k, kill windows with x
+unbind-key x
+unbind-key &
+bind-key x confirm-before -p "kill-window #W? (y/n)" kill-window
+bind-key k confirm-before -p "kill-pane #P? (y/n)" kill-pane
+
+# Fuck with bells
+set-option -g bell-action any
+
+# Status Bar
+set-option -g status-utf8 on
+set -g status-bg green
+set -g status-fg black
+set -g status-left-length 50
+set -g status-left ' PANE TITLE: #T'
+set -g status-right '¯\_(ツ)_/¯ %m-%d-%y %H:%M '
+set -g status-justify centre
+
+# Long memory
+set -g history-limit 100000
+
+# Key-bindings that help
+# ======================
+# Tell'm where to get the source
+bind-key r source-file ~/.tmux.conf
+# Make a new window for SSHing
+bind-key S command-prompt -p ssh: "new-window -n %1 'ssh %1'"
+# Split into two panes, vertically
+bind-key | split-window -h
+# Split into two panes, whorizontally
+bind-key - split-window -v

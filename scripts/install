@@ -1,0 +1,10 @@
+#!/bin/sh
+# SET IT UP
+# (Does all your fancy configuring and getting your dotfiles going and
+# whatever.)
+# Aaron Greenberg
+# August 2012
+
+. scripts/homebrew
+
+rake install

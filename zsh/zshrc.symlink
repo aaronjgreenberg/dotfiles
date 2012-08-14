@@ -1,0 +1,28 @@
+# ZSHRC
+# =====
+#
+# My .zshrc borrows heavily from Zach Holman's .zshrc (http://git.io/FL2HRA)
+#
+# Aaron Greenberg
+# August 2012
+
+# Shortcut to your dotfiles path
+ZSH=$HOME/.aaron
+
+export PATH=/usr/local/bin:$PATH:$ZSH/bin
+
+# Autocompletion
+autoload -Uz compinit
+compinit
+
+# Source all the *.zsh files in your dotfiles repo
+for zsh_file in $ZSH/**/*.zsh; do
+	source $zsh_file
+done
+
+for fn in $ZSH/bin/*; do
+	chmod 777 $fn
+done
+
+# Get rid of the fucking scrollback!
+printf "\033c"

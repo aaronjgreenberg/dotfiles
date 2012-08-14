@@ -1,0 +1,10 @@
+#!/bin/bash
+# GLO
+# ===
+# Pulls down the current branch you're working on from a remote called origin
+#
+# Aaron Greenberg
+# August 2012
+
+br=`git branch | grep "*"`
+git pull origin ${br/* /}

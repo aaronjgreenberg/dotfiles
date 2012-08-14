@@ -1,0 +1,29 @@
+# GIT CONFIGURATION FILE
+# ======================
+#
+# Aaron Greenberg
+# August 2012
+
+[hub]
+        protocol = https
+[user]
+        name = Aaron Greenberg
+        email = aaronjgreenberg@gmail.com
+[credential]
+        helper = osxkeychain
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+        ui = true
+[core]
+        excludesfile = ~/.gitignore
+        editor = emacs
+[apply]
+        whitespace = nowarn
+[mergetool]
+        keepBackup = false
+[difftool]
+        prompt = false
+[help]
+        autocorrect = 1

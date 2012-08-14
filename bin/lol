@@ -1,0 +1,42 @@
+#!/usr/bin/env python
+# GIF-PASTA
+# ==========
+# GIFs, When You Need Them
+# Copies a random animated GIF to your Clipboard. For pastin'.
+#
+# N.B.: Currently only works on Mac OS X
+#
+# Aaron Greenberg
+# July 2012
+
+# DEPS #
+# ==== #
+import sys
+import os
+import string
+import random
+
+# VARIABLES #
+# ========= #
+GIF_LIST = 'Dropbox/assets/gifs.txt'
+HOME_DIR = os.getenv('HOME')
+GIF_PATH = os.path.join(HOME_DIR, GIF_LIST)
+
+# Open the files of GIFs, get all the lines, and close the file.
+GIF_LIST = open(GIF_PATH, 'r')
+gifs = GIF_LIST.readlines()
+GIF_LIST.close()
+
+# Strip the newlines off each GIF path (they're included when the GIF_LIST
+# file is read)
+gifs = [gif.strip(string.whitespace) for gif in gifs]
+
+# Pick a random gif
+gif = random.choice(gifs)
+
+# And write to the Clipboard:
+clipboard = os.popen('pbcopy', 'w')
+clipboard.write(gif)
+clipboard.close()
+
+

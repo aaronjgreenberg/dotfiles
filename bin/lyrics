@@ -1,0 +1,30 @@
+#!/bin/bash
+# SONG LYRICS ON THE CL
+# =====================
+#
+# From @febuiles (https://gist.github.com/1549979)
+#
+# Aaron Greenberg
+# August 2012
+
+rdio=`osascript -e 'tell application "System Events" to (name of processes) contains "Rdio"'`
+itunes=`osascript -e 'tell application "System Events" to (name of processes) contains "iTunes"'`
+
+if test $rdio = true
+	then
+		artist=`osascript -e 'tell application "Rdio" to get artist of current track'`
+		title=`osascript -e 'tell application "Rdio" to get name of current track'`
+
+		song=`curl -G --data-urlencode "artist=$artist" \
+		 	--data-urlencode "title=$title" -s http://makeitpersonal.co/lyrics`
+
+		echo -e "$artist - $title\n$song" | more
+else
+	artist=`osascript -e 'tell application "iTunes" to get artist of current track'`
+	title=`osascript -e 'tell application "iTunes" to get name of current track'`
+
+	song=`curl -G --data-urlencode "artist=$artist" \
+	 	--data-urlencode "title=$title" -s http://makeitpersonal.co/lyrics`
+
+	echo -e "$artist - $title\n$song" | more
+fi
