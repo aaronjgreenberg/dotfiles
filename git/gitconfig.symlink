@@ -4,8 +4,6 @@
 # Aaron Greenberg
 # August 2012
 
-[hub]
-        protocol = https
 [user]
         name = Aaron Greenberg
         email = aaronjgreenberg@gmail.com
