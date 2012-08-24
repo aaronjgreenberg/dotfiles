@@ -6,7 +6,7 @@
 
 [user]
         name = Aaron Greenberg
-        email = aaronjgreenberg@gmail.com
+        email = a@aaronjgreenberg.com
 [credential]
         helper = osxkeychain
 [color]
