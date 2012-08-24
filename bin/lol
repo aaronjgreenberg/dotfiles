@@ -38,5 +38,3 @@ gif = random.choice(gifs)
 clipboard = os.popen('pbcopy', 'w')
 clipboard.write(gif)
 clipboard.close()
-
-
