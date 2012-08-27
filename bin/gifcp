@@ -1,0 +1,6 @@
+#!/bin/bash
+# Appends the passed gif url to the gifs.txt file
+#
+# Aaron Greenberg
+# August 2012
+echo "$1" >> ~/Dropbox/assets/gifs.txt
