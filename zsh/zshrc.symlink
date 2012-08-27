@@ -21,7 +21,7 @@ for zsh_file in $ZSH/**/*.zsh; do
 done
 
 for fn in $ZSH/bin/*; do
-	chmod 777 $fn
+	chmod 755 $fn
 done
 
 # Get rid of the fucking scrollback!
