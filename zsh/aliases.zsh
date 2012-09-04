@@ -11,4 +11,5 @@ alias ll="ls -l"							# Show long version of files. No hidden tho.
 alias rl=". ~/.zshrc"						# Reload the environment.
 
 # Get a list of Olin's printer URLs.
+# -- Written by Tim Cameron Ryan (https://github.com/tcr)
 alias printers='curl http://linux.olin.edu/printing/olin-cups.tar.gz --silent | gzip -d - | tar -Of - -x printers.conf | grep "<Printer" | cut -c 10- | sed "s/>\$/.olin.edu\//" | sed "s/^/http:\/\//"'
