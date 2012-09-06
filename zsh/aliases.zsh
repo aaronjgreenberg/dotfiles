@@ -16,4 +16,4 @@ alias printers='curl http://linux.olin.edu/printing/olin-cups.tar.gz --silent | 
 
 # Open Olin's SCOPE Intranet.
 # Also by Tim Cameron Ryan (https://github.com/ohack/olinrc/blob/master/.olinrc)
-alias oscope='mkdir /Volumes/SCOPE || mount -t smbfs //agreenberg@fsvs01/SCOPE /Volumes/SCOPE || open /Volumes/SCOPE/SCOPE_intranet/SCOPE_intranet.html'
+alias oscope='open /Volumes/SCOPE/SCOPE_intranet/SCOPE_intranet.html'
