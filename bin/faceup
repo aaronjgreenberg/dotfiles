@@ -1,0 +1,45 @@
+# FACEUP
+# ======
+# Shell command for interacting with faceup.me
+# http://faceup.me, from https://github.com/botriot/faceup
+#
+# Aaron Greenberg
+# September 2012
+
+# Print the help text for faceup
+help()
+{
+	cat <<EOF
+
+	USAGE:
+		faceup [-h] TRANSFORM URL
+
+	TRANSFORMS:
+		hipster			disguise
+		phantom			googly
+		eyepatch		mustache
+		beard			monocle
+		sopa			mustache2
+		clown			scumbag
+		jason			batman
+		disapprove		rohan
+		zedd			cigar
+		pipe
+
+	EXAMPLES:
+		faceup hipster http://foo.com/image.png
+		faceup mustache http://foo.com/image2.jpg
+
+EOF
+}
+
+if (test -z $1 && test -t 0) || test "$1" == '-h' || test "$#" -ne 2; then
+	help
+	exit 1
+fi
+
+TRANSFORM="$1"
+URL="$2"
+
+open "http://faceup.me/img?overlay=$TRANSFORM&src=$URL"
+
