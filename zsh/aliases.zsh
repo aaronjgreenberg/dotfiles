@@ -13,3 +13,7 @@ alias rl=". ~/.zshrc"						# Reload the environment.
 # Get a list of Olin's printer URLs.
 # -- Written by Tim Cameron Ryan (https://github.com/tcr)
 alias printers='curl http://linux.olin.edu/printing/olin-cups.tar.gz --silent | gzip -d - | tar -Of - -x printers.conf | grep "<Printer" | cut -c 10- | sed "s/>\$/.olin.edu\//" | sed "s/^/http:\/\//"'
+
+# Open Olin's SCOPE Intranet.
+# Also by Tim Cameron Ryan (https://github.com/ohack/olinrc/blob/master/.olinrc)
+alias oscope='mkdir /Volumes/SCOPE || mount -t smbfs //agreenberg@fsvs01/SCOPE /Volumes/SCOPE || open /Volumes/SCOPE/SCOPE_intranet/SCOPE_intranet.html'
