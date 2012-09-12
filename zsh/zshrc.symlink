@@ -26,3 +26,6 @@ done
 
 # Get rid of the fucking scrollback!
 printf "\033c"
+
+# Olin-Related Files
+source $ZSH/olin/.olinrc
