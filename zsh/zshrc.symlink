@@ -10,6 +10,7 @@
 ZSH=$HOME/.aaron
 
 export PATH=/usr/local/bin:$PATH:$ZSH/bin
+export EDITOR=/usr/bin/emacs
 
 # Autocompletion
 autoload -Uz compinit
