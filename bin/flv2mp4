@@ -1,0 +1,26 @@
+#!/bin/bash
+# FLV -> MP4
+# ==========
+# Convert a .flv file (often comes from YouTube) into a more useable .mp4 file.
+#
+# DEPENDENCIES
+# ------------
+# ffmpeg (http://ffmpeg.org/)
+#
+# Aaron Greenberg
+# November 2012
+
+file=$1
+
+if test ${file: -4} != ".flv" 
+then
+	echo "Get out, the file has to be a FLV."
+	exit 1
+fi
+
+FULLENGTH=${#file}
+let LENGTH=$FULLENGTH-4
+TITLE=${file:0:$LENGTH}
+OUTPUT="$TITLE.mp4"
+
+ffmpeg -i "$file" -vcodec copy -acodec copy "$OUTPUT"
