@@ -1,0 +1,26 @@
+#!/bin/bash
+# MP4 -> GIF
+# ==========
+# Simple script to convert some part of an MP4 video file into an animated
+# gif.
+#
+# Borrowed from Stuart Feldt's Gist [https://gist.github.com/3355489]
+#
+# Aaron Greenberg
+# November 2012
+
+movie=$1
+start=$2
+length=$3
+delay=$4
+width=$5
+dirname=$movie-frames
+framesdir=~/Desktop/$dirname
+
+mkdir -p $framesdir
+
+ffmpeg -i $movie -ss 00:$start.00 -t $length $framesdir/frame%03d.gif
+gifme $framesdir/*.gif -d $delay -w $width
+
+rm -rf $framesdir
+
