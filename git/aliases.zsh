@@ -12,3 +12,6 @@ alias ghb="git checkout -b"
 alias ghp="git checkout -"
 alias gc="git commit"
 alias gd="git diff"
+alias gl="git pull"
+alias gp="git push"
+
