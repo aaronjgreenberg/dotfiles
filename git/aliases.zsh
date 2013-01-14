@@ -14,4 +14,5 @@ alias gc="git commit"
 alias gd="git diff"
 alias gl="git pull"
 alias gp="git push"
-
+alias gg="git log"
+alias ggs="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
