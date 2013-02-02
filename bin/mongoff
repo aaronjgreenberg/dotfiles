@@ -1,0 +1,9 @@
+# MONGOFF
+# =======
+# Shell command to kill the mongod process
+#
+# Aaron Greenberg
+# February 2013
+
+MONGO_PID=`ps aux | grep mongo | awk '{print $2}' | head -n 1`
+kill -15 $MONGO_PID
