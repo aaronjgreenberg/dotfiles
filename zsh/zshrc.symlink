@@ -9,7 +9,7 @@
 # Shortcut to your dotfiles path
 ZSH=$HOME/.aaron
 
-export PATH=/usr/local/bin:$PATH:$ZSH/bin
+export PATH=/usr/local/bin:$PATH:$ZSH/bin:/usr/texbin
 export EDITOR=/usr/bin/emacs
 
 # Autocompletion
