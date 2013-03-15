@@ -45,9 +45,9 @@ parse_git_dirty() {
         SUBMODULE_SYNTAX="--ignore-submodules=dirty"
   fi
   if [[ -n $(git status -s ${SUBMODULE_SYNTAX}  2> /dev/null) ]]; then
-    echo "%{$fg[red]%}*%{$fg[yellow]%}"
+    return true
   else
-    echo ""
+    return false
   fi
 }
 
@@ -55,16 +55,20 @@ parse_git_dirty() {
 git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null)
   if test $ref; then
-    prefix="%{$reset_color%} %{$fg[yellow]%}["
     suffix="]%{$reset_color%} "
-    echo "$prefix${ref#refs/heads/}$(parse_git_dirty)$suffix"
+    if $(parse_git_dirty); then
+      prefix="%{$reset_color%} %{$fg[red]%}["
+    else
+      prefix="%{$reset_color%} %{$fg[green]%}["
+    fi
+    echo "$prefix${ref#refs/heads/}$suffix"
   else
     echo " "
   fi
 }
 
 set_prompt() {
-  export PROMPT="%{$fg[green]%}[%c]$(git_prompt_info)%{$reset_color%}"
+  export PROMPT="%{$fg[yellow]%}[%c]$(git_prompt_info)%{$reset_color%}"
 }
 
 precmd() {
