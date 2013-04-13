@@ -42,6 +42,14 @@ task :install do
     end
     `ln -s "$PWD/#{linkable}" "#{target}"`
   end
+
+  man_pages = Dir.glob('*/**{.1}')
+  man_pages.each do |man_page|
+    file = man_page.split('/').last
+    target = "/usr/local/share/man/man1/#{file}"
+    `ln -s "$PWD/#{man_page}" "#{target}"`
+  end
+
 end
 
 task :uninstall do
@@ -62,6 +70,16 @@ task :uninstall do
     end
 
   end
+
+  man_pages = Dir.glob('*/**{.1}')
+  man_pages.each do |man_page|
+    file = linkable.split('/').last
+    target = "/usr/local/share/man/man1/#{file}"
+    if File.symlink?(target)
+      FileUtils.rm(target)
+    end
+  end
+
 end
 
 task :default => 'install'
