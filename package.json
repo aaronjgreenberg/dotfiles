@@ -8,7 +8,8 @@
 	"name": "Aaron Greenberg",
 	"version": "6.30.91",
 	"engines": {
-		"node": ">=x.x.x"
+		"node": ">=x.x.x",
+		"npm": ">=x.x.x"
 	},
 	"dependencies": {
 		"prompt": 	"x.x.x", // A beautiful command-line prompt for node.js
