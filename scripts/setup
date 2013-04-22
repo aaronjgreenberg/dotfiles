@@ -1,14 +1,17 @@
 #!/usr/bin/env bash
 #
-# Homebrew
-# ========
+# SETUP
+# =====
 #
-# From Holman. (http://git.io/b1hTqg)
+# Aaron Greenberg
+# April 22, 2013
 #
-# This installs some of the common dependencies needed (or at least desired)
-# using Homebrew.
+# First time run-through?  Sets up your machine with some good OS X defaults
+# and then installs some important dependencies using Homebrew.  Makes sure you
+# have Homebrew, too.
 
-# Check for Homebrew
+. osx/set-defaults.sh
+
 if test ! `which brew`
 then
   echo "  x You should probably install Homebrew first:"
@@ -18,7 +21,7 @@ else
   echo "  + Homebrew found."
 fi
 
-# Install grc and coreutils
-brew install grc coreutils git
+# Install Homebrew dependencies
+brew install grc coreutils git gifme ffmpeg mongodb redis
 
 exit 0
