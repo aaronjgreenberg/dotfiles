@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 #
 # Homebrew
 # ========
@@ -13,10 +13,12 @@ if test ! `which brew`
 then
   echo "  x You should probably install Homebrew first:"
   echo "    https://github.com/mxcl/homebrew/wiki/installation"
-  exit
+  exit 1
 else
   echo "  + Homebrew found."
 fi
 
 # Install grc and coreutils
 brew install grc coreutils git
+
+exit 0
