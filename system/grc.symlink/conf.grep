@@ -1,13 +1,16 @@
 ## Intended coloring for ls piped to grep ##
 ############################################
+
 # Directories
-regexp=^d.*
-colours=blue
+regexp=(^d.*)\s(.*$)
+colours=default, default, blue
 =======
+
 # Symlinks
-regexp=^l
-colours=magenta
+regexp=(^l.*)\s(.*\s)(->)
+colours=default, default, magenta, default
 =======
+
 # Executables
-regexp=^...x
-colours=red
+regexp=(^-[-rwx]{2,2}x.*)\s(.*$)
+colours=default, default, red
