@@ -1,0 +1,13 @@
+## Intended coloring for ls piped to grep ##
+############################################
+# Directories
+regexp=^d.*
+colours=blue
+=======
+# Symlinks
+regexp=^l
+colours=magenta
+=======
+# Executables
+regexp=^...x
+colours=red
