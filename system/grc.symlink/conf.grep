@@ -7,10 +7,10 @@ colours=default, default, blue
 =======
 
 # Symlinks
-regexp=(^l.*)\s(.*\s)(->)
+regexp=(^l.*)\d\s(.*)(\s->)
 colours=default, default, magenta, default
 =======
 
 # Executables
-regexp=(^-[-rwx]{2,2}x.*)\s(.*$)
+regexp=(^-[-rwx]{2,2}x.*)\d\s(.*$)
 colours=default, default, red
