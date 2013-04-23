@@ -14,4 +14,5 @@ then
     alias ping='colourify ping'
     alias traceroute='colourify /usr/sbin/traceroute'
     alias curl='colourify curl'
+    alias grep='colourify grep'
 fi
