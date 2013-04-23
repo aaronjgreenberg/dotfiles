@@ -2,7 +2,7 @@
 ############################################
 
 # Directories
-regexp=(^d.*)\s(.*$)
+regexp=(^d.*)\d\s(.*$)
 colours=default, default, blue
 =======
 
