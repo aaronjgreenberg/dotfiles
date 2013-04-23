@@ -98,3 +98,4 @@ install_dotfiles
 
 echo ''
 success 'Dotfiles installed!'
+echo ''
