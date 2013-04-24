@@ -7,9 +7,9 @@
 # August 2012
 
 # Shortcut to your dotfiles path
-ZSH=$HOME/.aaron
+export ZSHOME=$HOME/.aaron
 
-export PATH=/usr/local/bin:$PATH:$ZSH/bin:/usr/texbin
+export PATH=/usr/local/bin:$PATH:$ZSHOME/bin:/usr/texbin
 export EDITOR=/usr/bin/emacs
 export NODE_PATH=/usr/local/lib/node_modules
 export MANPATH=/usr/local/share/man/man1:$MANPATH
@@ -19,11 +19,11 @@ autoload -Uz compinit
 compinit
 
 # Source all the *.zsh files in your dotfiles repo
-for zsh_file in $ZSH/**/*.zsh; do
+for zsh_file in $ZSHOME/**/*.zsh; do
 	source $zsh_file
 done
 
-for fn in $ZSH/bin/*; do
+for fn in $ZSHOME/bin/*; do
 	chmod 755 $fn
 done
 
