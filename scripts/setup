@@ -22,7 +22,7 @@ else
 fi
 
 # Install Homebrew dependencies
-brew install coreutils git ffmpeg mongodb redis
-brew install https://raw.github.com/aaronjgreenberg/grc/master/agrc.rb
+brew tap aaronjgreenberg/homebrew-aaron
+brew install coreutils git ffmpeg mongodb redis aaron-grc
 
 exit 0
