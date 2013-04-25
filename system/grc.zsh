@@ -1,5 +1,5 @@
 GRC=`which grc`
-if [ "$TERM" != dumb ] && [ -n GRC ]
+if [ "$TERM" != dumb ] && [ -f GRC ]
 then
     alias colourify="$GRC -es --colour=auto"
     alias configure='colourify ./configure'
