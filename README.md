@@ -7,7 +7,7 @@ These are cobbled together from lots of articles and GitHub repos.  [Zach Holman
 
 The Setup
 ---------
-My files are organized topically, in folders. The files in a directory are associated with the software called out by that directory. Files ending with '.symlink' are symlinked into your ~/ folder, and files ending with '.zsh' are sourced by your shell on startup. Files in bin/ are made available in your path. For some more information, check out [Holman's README](http://git.io/eoJIZA).  His dotfiles are an inspiration.
+My files are organized topically, in folders. The files in a directory are associated with the software called out by that directory. Files ending with `.symlink` are symlinked into your `~/` folder, and files ending with `.zsh` are sourced by your shell on startup. Files in `bin/` and `utils/` are made available in your path. `bin/` files are useful functions and `utils/` files include scripts that are useful for sourcing in other scripts.  For some more information, check out [Holman's README](http://git.io/eoJIZA).  His dotfiles are an inspiration.
 
 Installation
 ------------
