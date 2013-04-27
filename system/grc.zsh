@@ -1,18 +1,18 @@
 GRC=`which grc`
 if [ "$TERM" != dumb ] && [ -e "$GRC" ]
 then
-    alias colourify="$GRC colorize -es --colour=auto"
-    alias configure='colourify ./configure'
-    alias diff='colourify diff'
-    alias make='colourify make'
-    alias gcc='colourify gcc'
-    alias g++='colourify g++'
-    alias as='colourify as'
-    alias gas='colourify gas'
-    alias ld='colourify ld'
-    alias netstat='colourify netstat'
-    alias ping='colourify ping'
-    alias traceroute='colourify /usr/sbin/traceroute'
-    alias curl='colourify curl'
-    alias grep='colourify grep'
+    alias colorify="$GRC colorify -es --colour=auto"
+    alias configure='colorify ./configure'
+    alias diff='colorify diff'
+    alias make='colorify make'
+    alias gcc='colorify gcc'
+    alias g++='colorify g++'
+    alias as='colorify as'
+    alias gas='colorify gas'
+    alias ld='colorify ld'
+    alias netstat='colorify netstat'
+    alias ping='colorify ping'
+    alias traceroute='colorify /usr/sbin/traceroute'
+    alias curl='colorify curl'
+    alias grep='colorify grep'
 fi
