@@ -22,7 +22,7 @@ compinit
 for zsh_file in $ZSHOME/**/*.zsh; do
 	source $zsh_file
 done
-source system/grc.zsh
+source $ZSHOME/system/grc.zsh
 
 for fn in $ZSHOME/bin/*; do
 	chmod 755 $fn
