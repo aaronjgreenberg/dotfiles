@@ -9,7 +9,7 @@
 # Shortcut to your dotfiles path
 export ZSHOME=$HOME/.aaron
 
-export PATH=/usr/local/bin:$PATH:$ZSHOME/bin:/usr/texbin:$ZSHOME/utils
+export PATH=/usr/local/bin:$PATH:$ZSHOME/bin:/usr/texbin:$ZSHOME/utils:$HOME/.aws/bin
 export EDITOR=/usr/bin/emacs
 export NODE_PATH=/usr/local/lib/node_modules
 export MANPATH=/usr/local/share/man/man1:$MANPATH
