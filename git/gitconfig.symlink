@@ -17,6 +17,8 @@
 [core]
         excludesfile = ~/.gitignore
         editor = emacs
+[alias]
+        lg = log --graph --pretty=format:'%C(red)%h%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%cr) %C(bold blue)<%an>%C(reset)' --abbrev-commit
 [apply]
         whitespace = nowarn
 [mergetool]
