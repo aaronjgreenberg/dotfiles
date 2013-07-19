@@ -23,6 +23,6 @@ fi
 
 # Install Homebrew dependencies
 brew tap aaronjgreenberg/homebrew-aaron
-brew install coreutils git ffmpeg mongodb redis aaron-grc
+brew install coreutils git ffmpeg mongodb redis emacs aaron-grc
 
 exit 0
