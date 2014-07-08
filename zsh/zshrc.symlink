@@ -29,3 +29,5 @@ done
 
 # Get rid of the fucking scrollback!
 printf "\033c"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
